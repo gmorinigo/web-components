@@ -32,7 +32,6 @@ class UserLogin extends HTMLElement {
       bubbles: true,
       composed: true
     });
-    console.log("Event", event);
     this.dispatchEvent(event);
   }
 
