@@ -11,20 +11,16 @@ class AlertMessage extends HTMLElement {
   }
 
   attributeChangedCallback(name, old, now) {
-    console.log('name: ' + name);
-    console.log('now: ' + now);
     if (now!=''){
       let alertMessageContainer = this.shadowRoot.getElementById("alertMessageContainer");
       alertMessageContainer.style.visibility = 'visible';
 
       if (name === "type") {
         let type = this.shadowRoot.getElementById("type");
-        console.log(type);
         type.innerHTML = 'Login: ' + now;
       }
       if (now!=null && name === "message") {
         let message = this.shadowRoot.getElementById("message");
-        console.log(message);
         message.innerHTML = 'Login: ' + now;
       }
     }

@@ -18,11 +18,9 @@ class UserLogin extends HTMLElement {
     const password = this.shadowRoot.querySelector('#password').value;
  
     if (userName === 'admin' && password === 'admin') {
-      console.log("Login success");
       this._throwCustomEvent('user.login:login-success', {username: userName});
     } 
     else {
-      console.log("Login error");
       this._throwCustomEvent('user.login:login-error', {errorMessage: 'Usuario o contraseña incorrectos'});
     }
 
